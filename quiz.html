@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Gaming</title>
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="quiz.css">
+    
+</head>
+<body>
+    <div id="header">
+        <h1 id="title">Today's Quiz</h1>
+        <div id="timer">Time: <span id="time">30</span> seconds</div>
+    </div>
+   <style>
+    body {
+        background-image: url('https://gamethinking.io/wp-content/uploads/sites/5/2018/12/quiz-background.png'); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;    }
+</style>
+
+    <!-- quiz-container -->
+    <div id="quiz-container">
+        <!-- question container -->
+        <div class="questions">
+            <h2 id="question"></h2>
+            <ol type="A">
+                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
+            </ol>
+            <h4 id="stat"></h4>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="next">Next</button>
+        </div>
+    </div>
+
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+        <h2 id="score-title">Your Score</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+    </div>
+
+    <!-- answers section -->
+    <div id="answerBank">
+        <h2>Answers :</h2>
+        <ol type="1" id="answers"></ol>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+    </div>
+
+    <!-- javascript file source -->
+    <script src="quiz.js"></script>
+    <script>
+        // Set the initial time limit
+        let timeLimit = 30;
+        let timer = setInterval(function () {
+            timeLimit--;
+            document.getElementById('time').textContent = timeLimit;
+
+            // Check if time has run out
+            if (timeLimit <= 0) {
+                clearInterval(timer);
+                // Add your logic for when time runs out, for example, show the scoreboard
+                showScoreboard();
+            }
+        }, 1000);
+
+        // Function to show the scoreboard (you can replace this with your own logic)
+        function showScoreboard() {
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('scoreboard').style.display = 'block';
+            document.getElementById('timer').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Quiz Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+        }
+        nav a:hover {
+                    background-color: #ddd;
+                    color: black;
+        }
+        
+
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+            img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin-bottom: 3%;
+        margin-left: 60px;
+    }
+
+    .ref a {
+        margin-left: 56px;
+        margin-right: 100px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        margin-left: 0%;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 3%;
+    }
+
+    .topnav a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+
+        a {
+            color: white;
+        }
+    }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav style="margin-top: none;">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <p>If you have any questions or feedback, please don't hesitate to get in touch with us:</p>
+            <ul>
+                <li>Email: <a href="mailto:contact@quizwuizwebsite.com">contact@quizwuizwebsite.com</a></li>
+                <li>Phone: +1 (123) 456-7890</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+            <p>You can also reach out to us using the contact form below:</p>
+            <form action="submit_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Quiz Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
